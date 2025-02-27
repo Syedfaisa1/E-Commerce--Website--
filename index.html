@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebShop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/shopify-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>  <!--NAVBAR-->
+        <div class="nav-bar">
+            <div class="logo"></div>
+                <!--NAV---MENU-->
+                    <ul>
+                        <li><a href="#HOME" style="text-decoration: none; color: black;">HOME</a></li>
+                        <li>CATEGORIES
+                            <div class="dropdown">
+                                <ul>
+                                    <li>FASHION</li>
+                                    <li>ELECTRONICS</li>
+                                    <li><a href="#FEATURED PRODUCTS" style="text-decoration: none; color: black;">FEATURED PRODUCTS</a></li>
+                                    <li><a href="#brand-div" style="text-decoration: none; color: black;">NEW BRANDS</a></li>
+                                    <li>NEW SALL</li>
+                                    <li>50% OFFERS</li>
+                                    <img src="hero.img/menu-img.webp" style="height: 150px;">
+                                </ul>
+                            </div>
+                        </li>
+                        <li>SHOP
+                            <div class="dropdown2">
+                                <ul>
+                                    <li>Shop Cart</li>
+                                    <li>
+                                    <a href="#" class="baskbtn2" id="baskbtn2" style="text-decoration: none; color: black;">Wishlist</a>
+                                    </li>    
+                                    <li>Product Details</li>    
+                                    <li>Payment Method</li>
+                                    <li>Billing Details</li>
+                                    <li>Addresses</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>ABOUT</li>
+                        <li><a href=#footer-container style="text-decoration: none; color: black;">CONTACT</a></li>
+                        <li>ACCOUNT
+                            <div class="dropdown3">
+                                <ul>
+                                    <li>Dashboard</li>
+                                    <li>My Orders</li>
+                                    <li>My Profile</li>
+                                    <li>Edit Profile</li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="button" id="button" style="text-decoration: none; color: black;">Login</a>
+                                    </li>
+                                    <li>Register</li>
+                                    <li>Password</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>BLOG
+                            <div class="dropdown4">
+                                <ul>
+                                    <li><a href="#blog-container" style="text-decoration: none; color: black; transition: 8s ease-in;">Blog Post</a></li>
+                                    <li>Blog Read</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!--ICONS-->
+                    <div class="icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <button id ="modeBtn" style="background-color: transparent; border: none;">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                        <i class="fa-regular fa-heart"></i>
+                        <a href="#" class="baskbtn" id="baskbtn"><i class="fa-solid fa-basket-shopping"></i></a>   
+                        <a href="#" class="buttonpop" id="buttonpop"><i class="fa-solid fa-circle-user"></i></a> 
+                    </div>    
+            </div>
+    </header>  
+
+    <div class="popup">
+        <div class="popimg"></div>
+        <div class="form-content">
+            <a href="#" class="close"><i class="fa-solid fa-circle-xmark fa-xl"></i></a>
+                  <h1 style="color: white;">Login</h1>
+                <br> 
+                    <input type="text" placeholder="Email or phone" class="enter">
+                    <input type="password" placeholder="password"  class="enter">
+                    <br>
+                    <div class="submit"> 
+                    <button>LOGIN</button>
+                    </div>
+                <br>
+                <a href="#" class="forget-pass">Forget Password?</a>
+                <br>
+                    <div class="bottom-link">
+                <br>
+                    Don't have Account<a href="#">SingUp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!---------------------------------------_ADD_TO_CARD_--------------------------------------------->    
+  
+<section class="addC">
+    <div class="container-card">
+        <div class="itmeshead">
+            <input type="text" placeholder="Search Products..." id="search-items" onkeyup="search()">
+            <input type="submit" class="mysubmit">
+            <div class="closeX"><i class="fa-solid fa-xmark fa-xl"></i></div>    
+        </div>
+<hr>
+        <div class="allitems" id="allitems">
+
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img"></div>
+                   <div class="card-text"><h2>Black Dress</h2><p>1 X $259.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div>
+<hr>
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/02.webp');"></div>
+                   <div class="card-text"><h2>yellow </h2><p>1 X $509.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div>
+<hr>        
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/03.webp');"></div>
+                   <div class="card-text"><h2>red rose</h2><p>1 X $89.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div>
+<hr>        
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/04.webp');"></div>
+                   <div class="card-text"><h2> Multi Product</h2><p>1 X $59.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div>    
+<hr>
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/01\(1\).webp');"></div>
+                   <div class="card-text"><h2>Blue Name</h2><p>1 X $59.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div>
+<hr>        
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/04\(1\).webp');"></div>
+                   <div class="card-text"><h2>Product Name</h2><p>1 X $109.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div> 
+<hr>
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/07\(1\).webp');"></div>
+                   <div class="card-text"><h2>Product Name</h2><p>1 X $59.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div> 
+<hr>            
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/09.webp');"></div>
+                   <div class="card-text"><h2>Pure white</h2><p>1 X $119.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div> 
+<hr>                
+            <div class="items">
+                <div class="card-items">
+                   <div class="card-img" style="background-image: url('images/10.webp');"></div>
+                   <div class="card-text"><h2>Golde Work</h2><p>1 X $99.00</p></div>
+                   <div class="trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                </div>     
+                
+                </div>           
+<hr>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="check"><button class="check-out">CHECKOUT</button></div>
+</section>  
+    
+
+    
+<!-----------------------------------HEROOO SECTION-------------------------->
+
+    <div class="hero-section" id="HOME">
+
+        <div class="slidshow">
+            <video controls autoplay loop src="hero.img/video.hero.mp4" style="width:100% ; background-size:cover ;" >
+        </div>
+        <div class="slidshow">
+            <img src="hero.img/h3.jpg" style="width:100% ;">
+        </div>
+        <div class="slidshow">
+            <img src="hero.img/h2.png" style="width:100% ;">
+        </div>
+        <div class="slidshow">
+            <img src="hero.img/h1.png" style="width:100% ;">
+        </div>
+    
+    </div>  
+
+    <div class="sB">
+        <button onclick="goPrev()" class="sbtnL">
+            <i class="fa-solid fa-angle-left fa-2xl"></i>
+        </button>
+        
+        <button onclick="goNext()" class="sbtnR">
+            <i class="fa-solid fa-angle-right fa-2xl"></i>
+        </button>
+    </div>
+ 
+<!--------------------------------------NEW SECTIOn-------------------- ----->
+    <section class="padding" id="FEATURED PRODUCTS">
+            <div class="text-container">
+                <h3>Featured Products</h3>
+                <p>The Purpose Lorem ipsum</p>
+            </div>  
+        <section class="padding1">     
+            <div class="b1">
+                <button class="btn-slides" onclick="firstImg()"><i class="fa-solid fa-chevron-left"></i></button>
+            </div>
+                <div class="product-list" id="product-list">
+                    <div class="divs-slides">
+                        <div class="slider">
+                        <div class="div1"></div>
+                            <div class="sub-div">
+                            <h4>Product Name</h4>
+                            <h1>59$</h1>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: yellow;"></i>
+                        </div></div>
+                        
+
+                        <div class="slider">
+                            <div class="div3"></div>
+                            <div class="sub-div">
+                            <h4>Product Name</h4>
+                            <h1>59$</h1>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div></div>
+
+                        <div class="slider">
+                            <div class="div2"></div>
+                            <div class="sub-div">
+                            <h4>Product Name</h4>
+                            <h1>59$</h1>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-solid fa-star-half-stroke" style="color: yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div></div>
+
+                        <div class="slider">
+                            <div class="div4"></div>
+                            <div class="sub-div">
+                            <h4>Product Name</h4>
+                            <h1>59$</h1>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div></div>
+
+                        <div class="slider">
+                            <div class="div5"></div>
+                            <div class="sub-div">
+                            <h4>Product Name</h4>
+                            <h1>59$</h1>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div></div>
+
+                            <div class="slider">
+                                <div class="div6"></div>
+                                <div class="sub-div">
+                                <h4>Product Name</h4>
+                                <h1>59$</h1>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div></div>
+                    </div>
+                </div>
+                <div class="b2">
+                    <button class="btn-slides" onclick="secondImg()"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>     
+            </div>
+        </div>
+    </section>
+
+<!-------------LISTTTT------------->   
+<section class="latest">
+    <div class="container-latest">
+        <div class="text-latest">
+            <h3>Latest Products</h3>
+            <p>The purpose of lorem ipsum</p>
+        </div>
+            <div class="row">
+                <button class="rowb">New Arrival</button>
+                <button class="rowb">Best Sellar</button>
+                <button class="rowb">Trending</button>
+                <button class="rowb">Special Offer</button>
+            </div><hr>  
+
+                <div class="latest-list">
+                        <div class="main-list"> 
+                            <div class="col">
+                                <div class="card1">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                            <!---2nd-->
+                            <div class="col">
+                                <div class="card2">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                            <!---3nd-->
+                            <div class="col">
+                                <div class="card3">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---4nd-->
+                             <div class="col">
+                                <div class="card4">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---5nd-->
+                             <div class="col">
+                                <div class="card5">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---6nd-->
+                             <div class="col">
+                                <div class="card6">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---7nd-->
+                             <div class="col">
+                                <div class="card7">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---8nd-->
+                             <div class="col">
+                                <div class="card8">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---9nd-->
+                             <div class="col">
+                                <div class="card9">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                            </div>
+
+                             <!---10nd-->
+                             <div class="col">
+                                <div class="card10">
+                                    <div class="card-trans"></div>
+                                </div>
+                                    <div class="postion-list">
+                                        <h4>Product Name</h4>
+                                        <h1>59$</h1>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!------------------------------WHAT WE OFFER---------------------->
+    <section>
+        <div class="whatbox">
+            <div class="whatContainer">
+                <div class="what-text">
+                    <h2>What We Offer!</h2>
+                </div>    
+                <div class="what-text2">
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+<!---cardss-->
+                <div class="what-card">
+                    <div class="what-C1">
+                        <div class="c1-ic">
+                            <i class="fa-solid fa-truck fa-2xl" style="color: rgb(109, 109, 208);"></i>
+                        </div>
+                        <div class="c1-text">Free Delivery</div>
+                        <div class="c1-lorem">
+                            Nor again is there anyone who loves or pursues or desires to obtain pain of itself.
+                        </div>
+                    </div>
+                    <div class="what-C2">
+                        <div class="c2-ic">
+                            <i class="fa-regular fa-credit-card fa-2xl" style="color: #f90101;"></i>
+                        </div>
+                        <div class="c2-text">Secure Payment</div>
+                        <div class="c2-lorem">
+                            Nor again is there anyone who loves or pursues or desires to obtain pain of itself.
+                        </div>
+                    </div>
+                    <div class="what-C3">
+                        <div class="c3-ic">
+                            <i class="fa-solid fa-cart-shopping fa-xl" style="color: #04f12b;"></i>
+                        </div>
+                        <div class="c3-text">Free Returns</div>
+                        <div class="c3-lorem">
+                            Nor again is there anyone who loves or pursues or desires to obtain pain of itself.
+                        </div>
+                    </div>
+                    <div class="what-C4">
+                        <div class="c4-ic">
+                            <i class="fa-solid fa-headphones fa-2xl" style="color: #e4b60f;"></i>
+                        </div>
+                        <div class="c4-text">24/7 Support</div>
+                        <div class="c4-lorem">
+                            Nor again is there anyone who loves or pursues or desires to obtain pain of itself.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="new-p">
+            <div class="new-img"></div>
+            <div class="new-text">
+                <div class="card-body">
+                    <div class="card-h">
+                    <h1><a>New Features Of Tranding Products</a></h1></div>
+                    <hr>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                    <hr>    
+                        <p>All the Lorem Ipsum generators on the Internet tend.</p>
+                    <hr>    
+                        <p>There are many variations of passages of Lorem Ipsum available.</p>
+                    <hr>    
+                        <p>There are many variations of passages available.</p>
+                    <div class="new-buy">
+                    <button style="background-color: black; color: white;">BUY NOW</button>
+                    <button class="newbb">VIEW DETAILS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="brand-div" id="brand-div">
+            <div class="brand-container">
+                <div class="brand-text">
+                    <h3>Shop By Brands</h3>
+                    <p>Select Your Favorite Brand And Purches</p>
+                </div>
+                <div class="row-brand">
+                    <div class="row1">
+                        <div class="amazon"></div>
+                    </div>
+                    <div class="row2">
+                        <div class="canva"></div>
+                    </div>
+                    <div class="row3">
+                        <div class="dji"></div>
+                    </div>
+                    <div class="row4">
+                        <div class="samsung"></div>
+                    </div>
+                    <div class="row5">
+                        <div class="motorola"></div>
+                    </div>
+                    <div class="row6">
+                        <div class="sony"></div>
+                    </div>
+                    <div class="row7">
+                        <div class="microsoft"></div>
+                    </div>
+                    <div class="row8">
+                        <div class="puma"></div>
+                    </div>
+                    <div class="row9">
+                        <div class="addidas"></div>
+                    </div>
+                    <div class="row0">
+                        <div class="nb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+    <section>
+        <div class="big-box">
+            <div class="big-box2">
+                <div class="small-box">
+                    <h3>Get Latest Update by</h3> <br>
+                    <h3>Subscribe Our Newslater</h3> <br>
+                    <input type="text" class="semail" placeholder="Enter Your Email"> <br><br>
+                    <button class="sbutton">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="blog-container" id="blog-container">
+            <div class="blog-text">
+                <h1>Latest Blog</h1>
+                <p>Check Our latest news</p>
+            </div> <br>
+            <div class="blog-cards">
+                <div class="blog-row">
+                    <div class="blog1">
+                        <div class="bCard" style="background-image: url('images/blog3.webp'); background-size: cover;"></div>
+                        <div class="bbody">
+                            <div class="userdiv">
+                                <i class="fa-solid fa-user"></i>
+                                <p>Faisal</p>
+                                <i class="fa-regular fa-calendar"></i>
+                                <p>10 Feb 2025</p>
+                            </div> <br>
+                            <h5>Blog title here</h5>
+                            <p>Some quick exapmle tetx to bulid on thr card title and make.</p> <br>
+                            <a href="#"><button class="blog-btn">READ MORE</button></a>
+                        </div>
+                    </div>
+                </div>    
+
+                <div class="blog-row">
+                    <div class="blog1">
+                        <div class="bCard" style="background-image: url('images/blog1.webp'); background-size: cover;"></div>
+                        <div class="bbody">
+                            <div class="userdiv">
+                                <i class="fa-solid fa-user"></i>
+                                <p>Faisal</p>
+                                <i class="fa-regular fa-calendar"></i>
+                                <p>10 Feb 2025</p>
+                            </div> <br>
+                            <h5>Blog title here</h5>
+                            <p>Some quick exapmle tetx to bulid on thr card title and make.</p> <br>
+                            <a href="#"><button class="blog-btn">READ MORE</button></a>
+                        </div>
+                    </div>
+                </div>    
+
+                <div class="blog-row">
+                    <div class="blog1">
+                        <div class="bCard" style="background-image: url('images/blog2.webp'); background-size: cover;"></div>
+                        <div class="bbody">
+                            <div class="userdiv">
+                                <i class="fa-solid fa-user"></i>
+                                <p>Faisal</p>
+                                <i class="fa-regular fa-calendar"></i>
+                                <p>10 Feb 2025</p>
+                            </div> <br>
+                            <h5>Blog title here</h5>
+                            <p>Some quick exapmle tetx to bulid on thr card title and make.</p> <br>
+                            <a href="#"><button class="blog-btn">READ MORE</button></a>
+                        </div>
+                    </div>
+                </div>    
+           </div>
+         </div>
+    </div>
+</section>
+
+
+
+<section class="footer" id="footer-container">
+    <div class="footer-container">
+    <div class="footer-rows">  
+        <div class="shopdiv">
+            <div class="footer-img"></div> <br>
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Veniam rationes corrupti molestiae perferendis, 
+                officia quos inventore itaque, velit, debitis.
+                laudantium quidem iste exercitationem assumenda? Ullam!</p><br>
+            <a href="#">Read More</a>
+        </div> <br>
+
+        <div class="explorediv">
+            <div class="explore-text">
+                <h1>Explore</h1>
+                <ul class="explore-ul"> <br>
+                    <li class="explore-ul">> Fashion</li>
+                    <li class="explore-ul">> Women</li>
+                    <li class="explore-ul">> Shoes</li>
+                    <li class="explore-ul">> Topwear</li>
+                    <li class="explore-ul">> Brand</li>
+                    <li class="explore-ul">> Furniture</li>
+                    <li class="explore-ul">> Kids</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="companydiv">
+            <div class="company-text">
+                <h1>Company</h1>
+                <ul class="explore-ul"> <br>
+                    <li class="explore-ul"> About Us</li>
+                    <li class="explore-ul"> Contact US</li>
+                    <li class="explore-ul"> FAQ</li>
+                    <li class="explore-ul"> Privacy</li>
+                    <li class="explore-ul"> Terms</li>
+                    <li class="explore-ul"> Complaints</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="followus">
+            <div class="followus-text">
+                <h1>Follow US</h1>
+                <div class="socialmedia">
+                    <div class="circle-media"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="circle-media"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="circle-media"><i class="fa-brands fa-linkedin"></i></div>
+                    <div class="circle-media"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="circle-media"><i class="fa-brands fa-instagram"></i></div>
+                </div> <br>
+                <h1>Support</h1>
+                <p>Suooort@example.com</p> <br>
+                <h1>Toll FRee</h1>
+                <p>18oo - 8XX 2XX</p>
+            </div>
+        </div>
+    </div>
+    </div>  
+
+    <div class="footicon">
+        <div class="icon-text">
+            <h1>Download Mobile App</h1>
+        </div> <br>
+        <div class="playstore">
+            <div class="googlestore" style="background-image: url('images/play-store.webp'); background-size: cover;"></div>
+            <div class="applestore" style="background-image: url('images/apple-store.webp'); background-size: cover;"></div>
+        </div>
+    </div> <br> <br>
+</section>
+
+<hr>
+
+<div class="www">
+    <div class="www-tetx">
+        <p>© 2022. www.example.com | All rights reserved.</p>
+    </div>
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
